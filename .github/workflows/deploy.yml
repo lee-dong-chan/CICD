@@ -20,7 +20,7 @@ jobs:
         run: echo "now test"
       # 작업 내용은 echo "now test"
   deploy:
-    runs-on: ubuntu-lastst
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4 # import// actions에 있는 checkout을 가져오겠다.
