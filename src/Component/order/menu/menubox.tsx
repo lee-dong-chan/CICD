@@ -5,7 +5,7 @@ export const MenuBox: FC = () => {
   return (
     <div className="my-3 border">
       <div className="flex justify-evenly border-b">
-        {tab == 1 ? (
+        {tab === 1 ? (
           <div className="p-3 flex-1 text-center border-b text-red-400 border-red-400  ">
             메뉴
           </div>
@@ -19,7 +19,7 @@ export const MenuBox: FC = () => {
             메뉴
           </div>
         )}
-        {tab == 2 ? (
+        {tab === 2 ? (
           <div className="p-3 flex-1 text-center border-b text-red-400 border-red-400  ">
             클린리뷰
           </div>
@@ -33,7 +33,7 @@ export const MenuBox: FC = () => {
             클린리뷰
           </div>
         )}
-        {tab == 3 ? (
+        {tab === 3 ? (
           <div className="p-3 flex-1 text-center border-b text-red-400 border-red-400  ">
             정보
           </div>

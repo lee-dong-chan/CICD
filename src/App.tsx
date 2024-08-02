@@ -4,7 +4,7 @@ import { Category as Cate } from "./lib/category";
 import { StoreList as Store } from "./lib/storelist";
 import { StoreNotice } from "./lib/storenotice";
 function App(): JSX.Element {
-  const [list, setlist] = useState<Cate[]>([
+  const [list] = useState<Cate[]>([
     new Cate(1, "category-01", "전체보기"),
     new Cate(2, "category-onedish", "1인분 주문"),
     new Cate(3, "category-10", "프랜차이즈"),
@@ -20,7 +20,7 @@ function App(): JSX.Element {
     new Cate(13, "category-convenience-store", "편의점/마트"),
   ]);
 
-  const [storelist, setStore] = useState<Store[]>([
+  const [storelist] = useState<Store[]>([
     new Store(
       1,
       "goobne",
@@ -68,7 +68,7 @@ function App(): JSX.Element {
     ),
   ]);
 
-  const [storenotice, setStoreNotice] = useState<StoreNotice[]>([
+  const [storenotice] = useState<StoreNotice[]>([
     new StoreNotice(
       1,
       "우천시 배달기사 부족으로인하여 배달이 오래걸릴수있습니다. 양해부탁드립니다"

@@ -23,6 +23,7 @@ const SearchComp = (): JSX.Element => {
           <img
             className="me-2 h-[2.5rem] rounded pointer-events-none"
             src="/imgs/location.png"
+            alt="img"
           ></img>
         </div>
 
@@ -37,6 +38,7 @@ const SearchComp = (): JSX.Element => {
         <div className="relative h-[1rem] left-[-4.5rem]">
           <img
             src="/imgs/cansle.png"
+            alt="img"
             className="h-[100%]"
             onClick={cansle}
           ></img>

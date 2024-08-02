@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Box } from "../../../css/css";
 
-const FindPw: FC = ({}) => {
+const FindPw: FC = () => {
   return (
     <div className="bg-gray-200">
       <div className={Box}>

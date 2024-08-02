@@ -17,13 +17,18 @@ const List: FC<IProps> = ({ list, storelist }) => {
         <div className="border-b shadow">
           <div className="h-[6rem] relative overflow-hidden flex justify-center">
             <div className="absolute -z-10 -top-[7rem]">
-              <img className="max-w-none" src="/imgs/bg-top.png"></img>
+              <img
+                className="max-w-none"
+                src="/imgs/bg-top.png"
+                alt="img"
+              ></img>
             </div>
             <div className="flex items-center justift-center">
               <div>
                 <img
                   className="me-2 h-[2.5rem] rounded pointer-events-none"
                   src="/imgs/location.png"
+                  alt="img"
                 ></img>
               </div>
 
@@ -33,7 +38,11 @@ const List: FC<IProps> = ({ list, storelist }) => {
               ></input>
 
               <div className="relative h-[1rem] left-[-4.5rem]">
-                <img src="/imgs/cansle.png" className="h-[100%]"></img>
+                <img
+                  src="/imgs/cansle.png"
+                  className="h-[100%]"
+                  alt="img"
+                ></img>
               </div>
               <div
                 className={`h-[2.5rem] px-[0.8rem] left-[-4rem] relative rounded-e text-white ${Center} bg-orange-400 select-none`}

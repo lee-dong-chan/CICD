@@ -14,6 +14,7 @@ const Item: FC<IProps> = ({ item, idx }) => {
         <img
           className="h-[5rem] me-3 border"
           src={`/imgs/${item.getImg()}.png`}
+          alt="img"
         ></img>
         <div className="flex-1">
           <div className="text-s">{item.getName()}</div>

@@ -21,6 +21,7 @@ const Info: FC<IProps> = ({ storelist, storenotice }) => {
           <img
             className="h-[100%] border"
             src={`/imgs/${store.getImg()}.png`}
+            alt="img"
           ></img>
         </div>
         <div className="px-2">
@@ -62,7 +63,7 @@ const Info: FC<IProps> = ({ storelist, storenotice }) => {
             <div className="text-[0.8rem] font-bold">사장님 알림</div>
             <div className="text-[0.8rem]">{notice.getNotice()}</div>
             <div className="flex flex-1 justify-end">
-              <img src="/imgs/arrow.png"></img>
+              <img src="/imgs/arrow.png" alt="img"></img>
             </div>
           </div>
         ) : (

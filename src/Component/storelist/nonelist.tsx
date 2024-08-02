@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { Center } from "../../css/css";
 
-const NoneList: FC = ({}) => {
+const NoneList: FC = () => {
   return (
     <div
       className={`${Center} h-[25rem] bg-white border flex-col text-[0.8rem] text-gray-400`}
