@@ -1,4 +1,4 @@
-import { useEffect, useState, FC } from "react";
+import { FC } from "react";
 import Home from "../../Page/home/home";
 
 import { Center } from "../../css/css";

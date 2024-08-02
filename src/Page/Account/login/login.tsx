@@ -1,7 +1,6 @@
-import { FC, useEffect, useState } from "react";
-import { Box, Center } from "../../../css/css";
+import { FC, useEffect } from "react";
+import { Box } from "../../../css/css";
 import { Link } from "react-router-dom";
-import FindEmail from "../findemail/FindEmail";
 
 interface IProps {}
 

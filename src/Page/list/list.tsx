@@ -1,4 +1,4 @@
-import { Component, FC, ReactNode } from "react";
+import { FC } from "react";
 import { Category as Cate } from "../../lib/category";
 import ListCategory from "../../Component/listcategory/category";
 import { Box, Center } from "../../css/css";

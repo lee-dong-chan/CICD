@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Layout from "./Component/layout/layout";
 import { Category as Cate } from "./lib/category";
 import { StoreList as Store } from "./lib/storelist";

@@ -1,8 +1,6 @@
-import { useState, useEffect, FC, useCallback } from "react";
-
 import Category from "../../Component/category/category";
 import { Category as Cate } from "../../lib/category";
-import { Box } from "../../css/css";
+
 import SearchComp from "../../Component/SearchComp/MainSearchComp";
 
 interface IProps {

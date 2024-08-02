@@ -1,9 +1,8 @@
 import { FC } from "react";
-import { Category as Cate } from "../../lib/category";
-import { Link } from "react-router-dom";
+
 import { StoreList as Store } from "../../lib/storelist";
 import Item from "./item";
-import Order from "../../Page/order/order";
+
 interface IProps {
   storelist: Store[];
 }

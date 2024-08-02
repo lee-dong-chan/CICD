@@ -1,5 +1,5 @@
-import { Box, Center } from "../../css/css";
-import { useEffect, useState, FC } from "react";
+import { Box } from "../../css/css";
+import { FC } from "react";
 import { Category as Cate } from "../../lib/category";
 import Item from "./item";
 

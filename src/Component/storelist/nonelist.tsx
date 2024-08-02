@@ -1,6 +1,5 @@
 import { FC } from "react";
-import { Category as Cate } from "../../lib/category";
-import { Link } from "react-router-dom";
+
 import { Center } from "../../css/css";
 interface IProps {}
 

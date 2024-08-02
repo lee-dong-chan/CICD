@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { StoreList as Store } from "../../../lib/storelist";
 import { useParams } from "react-router-dom";
-import StoreList from "../../storelist/storelist";
+
 interface IProps {
   storelist: Store[];
 }
