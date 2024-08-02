@@ -1,1 +1,21 @@
 #XML을 대체하는 문서  / YML,YXML
+
+name: Deploy React to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  #작업들
+  test:
+    #작업명
+    runs-on: ubunto-latest
+    #작업환경
+    steps:
+      #작업들을 순서에 맞춰사 직성
+      - name: "testing"
+        #작업명은 testing 이고
+        run: echo "now test"
+      #작업 내용은 echo "now test"
