@@ -52,7 +52,7 @@ jobs:
         run: SSH-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
       - name: Copy files to EC2
-        un: |
+        run: |
           ssh ${{secrets.EC2_USER}}@{{ secrets.EC2_HOST }} "mkdir -p /var/www/html"
           rsync -avz -e "ssh" ./build ${{ secrets.EC2_USER }}@{{ secrets.EC2_HOST }}:var/www/html
 
