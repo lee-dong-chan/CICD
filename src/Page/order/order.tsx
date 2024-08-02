@@ -3,7 +3,6 @@ import Info from "../../Component/order/info/info";
 import { MenuBox } from "../../Component/order/menu/menubox";
 import Orderlist from "../../Component/order/orderlist/orderlist";
 import { Box } from "../../css/css";
-import { Center } from "../../css/css";
 import { Category as Cate } from "../../lib/category";
 import { StoreList as Store } from "../../lib/storelist";
 import { StoreNotice } from "../../lib/storenotice";

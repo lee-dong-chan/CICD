@@ -1,10 +1,6 @@
 import { FC } from "react";
 import NoneOrderItem from "./noneorderitem";
 
-interface IProps {
-  
-}
-
 const Orderlist: FC = () => {
   return (
     <div className="w-[20rem]">

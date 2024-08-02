@@ -2,9 +2,7 @@ import { FC, useEffect } from "react";
 import { Box } from "../../../css/css";
 import { Link } from "react-router-dom";
 
-interface IProps {}
-
-const Login: FC<IProps> = ({}) => {
+const Login: FC = ({}) => {
   useEffect(() => {}, []);
 
   return (

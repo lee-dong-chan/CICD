@@ -1,16 +1,15 @@
 import { FC } from "react";
 import Home from "../../Page/home/home";
-
 import { Center } from "../../css/css";
-import Login from "../../Page/Account/login/login";
 import List from "../../Page/list/list";
 import { Routes, Route, Link } from "react-router-dom";
-import FindPw from "../../Page/Account/findpw/FindPw";
-import FindEmail from "../../Page/Account/findemail/FindEmail";
 import { Category as Cate } from "../../lib/category";
 import { StoreList as Store } from "../../lib/storelist";
 import Order from "../../Page/order/order";
 import { StoreNotice } from "../../lib/storenotice";
+import Login from "../../Page/Account/login/login";
+import FindEmail from "../../Page/Account/findemail/FindEmail";
+import FindPw from "../../Page/Account/findpw/FindPw";
 interface IProps {
   list: Cate[];
   storelist: Store[];
