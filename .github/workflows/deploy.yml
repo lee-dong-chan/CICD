@@ -8,14 +8,57 @@ on:
       - main
 
 jobs:
-  #작업들
+  # 작업들
   test:
-    #작업명
+    # 작업명
     runs-on: ubuntu-latest
-    #작업환경
+    # 작업환경
     steps:
-      #작업들을 순서에 맞춰사 직성
+      # 작업들을 순서에 맞춰사 직성
       - name: "testing"
-        #작업명은 testing 이고
+        # 작업명은 testing 이고
         run: echo "now test"
-      #작업 내용은 echo "now test"
+      # 작업 내용은 echo "now test"
+  deploy:
+    runs-on: ubuntu-lastst
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # import// actions에 있는 checkout을 가져오겠다.
+      
+      - name: Set up Node.js
+        uses: actuins/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Add SSH key
+        uses: webfactory/ssh-agent@v0.5.4
+          with:
+            ssh-private-key: ${{secrets.EC2_KEY}}
+
+        - name: Ensure SSH directory exists  ## 안적으면 키를 못받아옴
+          run: |
+            mkdir -p ~/ .ssh
+            chmod 700 ~/ .ssh 
+
+        - name: Install dependencies of project ## 레포지토리 접근시 실행할 폴더 명령어
+          working-directory: ./ 
+          run: npm i
+
+        - name: Build project
+          working-directory: ./
+          run: npm run build
+
+        - name: Add SSH known hosts
+        run: SSH-keyscan -H ${{secrets.EC2_HOST}} >> ~/.ssh/known_hosts
+
+        - name: Copy files to EC2
+          run: | 
+            ssh ${{secrets.EC2_USER}}@{{secrets.EC2_HOST}} "mkdir -p /var/www/html"
+            rsync -avz -e "ssh" ./build ${{secrets.EC2_USER}}@{{secrets.EC2_HOST}}:var/www/html 
+            
+    # rsync -avz -e "ssh" ./build ${{secrets.EC2_USER}}@{{secrets.EC2_HOST}}:var/www/html  == 현재 폴더의 build 폴더를 EC2 유저로 EC2 인스턴스 (HOST)에 접속해서 var/www/html에 파일을 옳겨달라     
+    # -e "ssh" == 접속 방법에대한 설정
+    # -avz == 설정,옵션
+    # -a: 전부
+    # -v: 모두 출력
+    # -z: 권한,소유자 그룹 등 유지
